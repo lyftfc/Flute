@@ -52,8 +52,8 @@ endif
 # ================================================================
 # CORE
 
-SRC_CORE ?= $(REPO)/src_Core/Core
-# SRC_CORE ?= $(REPO)/src_Core/Core_v2
+# SRC_CORE ?= $(REPO)/src_Core/Core
+SRC_CORE ?= $(REPO)/src_Core/Core_v2
 
 # ================================================================
 # Search path for bsc for .bsv files

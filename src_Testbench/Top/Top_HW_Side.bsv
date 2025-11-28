@@ -73,12 +73,14 @@ module mkTop_HW_Side (Empty) ;
 
       // ----------------
       // Load tohost addr from symbol-table file
+`ifdef WATCH_TOHOST
       Bool watch_tohost <- $test$plusargs ("tohost");
       let tha <- c_get_symbol_val ("tohost");
       Fabric_Addr tohost_addr = truncate (tha);
       $display ("INFO: watch_tohost = %0d, tohost_addr = 0x%0h",
 		pack (watch_tohost), tohost_addr);
       soc_top.set_watch_tohost (watch_tohost, tohost_addr);
+`endif
 
       // ----------------
       // Start timing the simulation
